@@ -1,0 +1,22 @@
+body {
+    background: #EBE3D5;
+    color: #776B5D;
+}
+
+header {
+    background: #B0A695;
+    color: #776B5D;
+}
+
+.task-form, .task-list {
+    background: #B0A695;
+}
+
+button {
+    background: #675D50;
+    color: #F5F5F5;
+}
+
+li {
+    background: #f9f9f9;
+}

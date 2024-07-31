@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="styles_line.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="light-theme.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1 style="font-size: 3vw;">
+                    TaskPilot
+                </h1>
+            </div>
+            <button id="theme-toggle" class="theme-toggle-button" style="width: auto;" >Light</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="task-form">
+            <h2>Add Task</h2>
+            <form>
+                <label for="task-title">Title:</label>
+                <input type="text" id="task-title" placeholder="Task Title" required title="Enter the title of the task">
+
+                <label for="task-details">Details:</label>
+                <textarea id="task-details" placeholder="Task Details" title="Enter additional details for the task"></textarea>
+
+                <label for="task-date">Date:</label>
+                <input type="date" id="task-date" required title="Select the due date of the task">
+
+                <label for="task-time">Time:</label>
+                <input type="time" id="task-time" required title="Select the time of the task">
+
+                <label for="task-repeat">Repeat:</label>
+                <select id="task-repeat" title="Choose how often the task should repeat">
+                    <option value="none">Does not repeat</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+
+                <button id="add-task" type="button" title="Add the task to the list">Add Task</button>
+            </form>
+        </section>
+        
+        <section class="task-list">
+            <h2>Tasks</h2>
+            <ul id="tasks"></ul>
+        </section>
+        <div class="Let_connect" style="font-size: 20px;">
+            For more projects-
+            <a href="https://github.com/codesH-himanshi" target="_blank">
+                <img id="theme-image" src="github-mark.png" alt="GitHub" style="width:auto;height:24px;"></a>
+            <p style="font-size: 10px;">&copy; 2024 Himanshi</p>
+        </div>
+        <script src="theme-toggle.js"></script>
+        <script src="scripts_line.js"></script>
+    </main>
+    
+    <footer>
+        <p>Task Management | Himanshi </p>
+    </footer>
+</body>
+</html>
