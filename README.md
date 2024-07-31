@@ -19,7 +19,7 @@ Welcome to TaskPilot, your all-in-one solution for managing projects and tasks e
 
 ## Open your browser and visit:
    ```
-   [TaskPilot-Website](https://codesh-himanshi.github.io/project-taskManagementweb/)
+   https://codesh-himanshi.github.io/project-taskManagementweb/
    ```
 
 ##  Contact & Support
