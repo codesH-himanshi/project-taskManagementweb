@@ -14,13 +14,15 @@ Welcome to TaskPilot, your all-in-one solution for managing projects and tasks e
 ![TaskPilot Dashboard with Dark theme](https://github.com/user-attachments/assets/ae5aaa8d-b1b6-45f2-b702-3f30a04048db)
 ![TaskPilot Task's Display](https://github.com/user-attachments/assets/d7657ba3-43c7-4aae-8c0b-7ce16aac823e)
 
-## 🛠️ Tech Stack
-- **Deployment:** GitHub
-
 ## Open your browser and visit:
    ```
    https://codesh-himanshi.github.io/project-taskManagementweb/
    ```
+
+## Or visit directly, on click:
+
+[Visit the live website](https://codesh-himanshi.github.io/project-taskManagementweb/) 
+
 
 ##  Contact & Support
 
