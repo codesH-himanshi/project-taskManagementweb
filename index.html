@@ -3,66 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaskPilot - Your all-in-one task management solution">
     <title>Task Management</title>
     <link rel="stylesheet" href="styles_line.css">
     <link id="theme-stylesheet" rel="stylesheet" href="light-theme.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
 </head>
 <body>
     <header>
         <nav>
             <div>
-                <h1 style="font-size: 3vw;">
-                    TaskPilot
-                </h1>
+                <h1 style="font-size: 2vw;">TaskPilot</h1>
             </div>
-            <button id="theme-toggle" class="theme-toggle-button" style="width: auto;" >Light</button>
+            <div class="nav-controls">
+                <button id="filter-tasks" class="nav-button" title="Filter tasks">
+                    <span>Filter</span>
+                    <select id="filter-select" aria-label="Filter tasks by">
+                        <option value="all">All Tasks</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="overdue">Overdue</option>
+                    </select>
+                </button>
+                <button id="theme-toggle" class="nav-button" aria-label="Toggle dark mode">Light</button>
+            </div>
         </nav>
     </header>
     
     <main>
         <section class="task-form">
             <h2>Add Task</h2>
-            <form>
-                <label for="task-title">Title:</label>
-                <input type="text" id="task-title" placeholder="Task Title" required title="Enter the title of the task">
+            <form id="task-form">
+                <label for="task-title" id="title-label">Title:</label>
+                <input type="text" id="task-title" placeholder="Task Title" required aria-labelledby="title-label">
 
-                <label for="task-details">Details:</label>
-                <textarea id="task-details" placeholder="Task Details" title="Enter additional details for the task"></textarea>
+                <label for="task-details" id="details-label">Details:</label>
+                <textarea id="task-details" placeholder="Task Details" aria-labelledby="details-label"></textarea>
 
-                <label for="task-date">Date:</label>
-                <input type="date" id="task-date" required title="Select the due date of the task">
+                <label for="task-date" id="date-label">Date:</label>
+                <input type="date" id="task-date" required aria-labelledby="date-label">
 
-                <label for="task-time">Time:</label>
-                <input type="time" id="task-time" required title="Select the time of the task">
+                <label for="task-time" id="time-label">Time:</label>
+                <input type="time" id="task-time" required aria-labelledby="time-label">
 
-                <label for="task-repeat">Repeat:</label>
-                <select id="task-repeat" title="Choose how often the task should repeat">
+                <label for="task-repeat" id="repeat-label">Repeat:</label>
+                <select id="task-repeat" aria-labelledby="repeat-label">
                     <option value="none">Does not repeat</option>
                     <option value="daily">Daily</option>
                     <option value="weekly">Weekly</option>
                     <option value="monthly">Monthly</option>
                 </select>
 
-                <button id="add-task" type="button" title="Add the task to the list">Add Task</button>
+                <div class="form-buttons">
+                    <button id="add-task" type="submit">Add Task</button>
+                    <button id="clear-form" type="reset">Clear</button>
+                </div>
             </form>
         </section>
         
         <section class="task-list">
             <h2>Tasks</h2>
+            <div class="task-controls">
+                <span id="task-count">0 tasks</span>
+                <button id="clear-tasks">Clear All</button>
+            </div>
             <ul id="tasks"></ul>
         </section>
-        <div class="Let_connect" style="font-size: 20px;">
-            For more projects-
-            <a href="https://github.com/codesH-himanshi" target="_blank">
-                <img id="theme-image" src="github-mark.png" alt="GitHub" style="width:auto;height:24px;"></a>
-            <p style="font-size: 10px;">&copy; 2024 Himanshi</p>
+        
+        <div class="connect-section">
+            <p>For more projects:</p>
+            <a href="https://github.com/codesH-himanshi" target="_blank" aria-label="GitHub profile">
+                <img id="theme-image" src="github-mark.png" alt="GitHub" style="width:auto;height:24px;">
+            </a>
+            <p class="copyright">&copy; 2024 Himanshi</p>
         </div>
-        <script src="theme-toggle.js"></script>
-        <script src="scripts_line.js"></script>
     </main>
     
     <footer>
-        <p>Task Management | Himanshi </p>
+        <p>Task Management | Himanshi</p>
     </footer>
+
+    <script src="theme-toggle.js"></script>
+    <script src="scripts_line.js"></script>
 </body>
 </html>
